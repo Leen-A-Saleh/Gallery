@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Booking</title>
+  <meta content="appointment booking system for a photo session" name="description">
+  <meta content="appointment system,booking,photo session,photoghrapher" name="keywords">
+  <!--icon-->
+  <link href="assets/img/icon.gif" rel="icon">
+  <!--Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <!--Vendor CSS-->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="vendor/aos/aos.css" rel="stylesheet">
+  <!--Custom CSS-->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- media css -->
+  <link rel="stylesheet" href="assets/css/media.css">
+</head>
+<body>
+<!-- ======= Header ======= -->
+<header id="header" class="header d-flex align-items-center fixed-top py-md-3">
+  <div class="container">
+    <div class=" d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
+        <h1 class="text-capitalize text-white fs-2">nostalgia lane</h1>
+      </a>
+      <!-- ======= Navbar ====== -->
+      <nav id="navbar" class="navbar">
+        <ul class="d-xl-flex align-items-center justify-content-end">
+          <li class="me-md-5"><a href="index.html" class="index text-capitalize">home</a></li>
+          <li class="me-md-5"><a href="about.html" class="about text-capitalize">about</a></li>
+          <li class="me-md-5"><a href="#" class="photographers text-capitalize">photographers</a></li>
+          <li class="me-md-5"><a href="services.html" class="services text-capitalize">services</a></li>
+          <li><a href="booking.html" class="booking text-capitalize" id="booking">booking</a></li>
+        </ul>
+      </nav>
+      <!-- ====== End Navbar -->
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    </div>
+  </div>
+</header>
+<!-- ======= End Header =======  -->
+  <main>
+    <section class="page-header booking align-items-center position-relative">
+      <div class="container">
+        <div class="mt-5">
+          <h2 class="text-capitalize pb-4 w-25">booking</h2>
+          <p class="mt-3 position-relative" data-text="It's great that you're looking for a photographer!"><span class="text-capitalize">i</span>t's great that you're looking for a photographer!</p>
+        </div>
+      </div>
+    </section>
+    <!-- php-form -->
+    <section id="contact" class="contact mt-5 pt-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-5">
+            <p class="mb-5 fw-semibold text-prim"><span class="text-capitalize">p</span>hotography is a captured moment of life is the moment that can't be repeated </p>
+            <p>" <span class="text-uppercase">i</span>t is the art of seizing the transient, the spontaneous, and the unrepeatable, turning them into fragments of eternity. 
+              <span class="text-uppercase">t</span>hrough the lens the  moments become poetic narratives. <span class="text-uppercase">e</span>very photograph is a visual time capsule, holding within it a universe of emotions, stories, and the undeniable beauty of the present "</p>
+          </div>
+          <div class="col-md-6 offset-1">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form p-4 mb-5">
+              <h2 class="fs-5"><span class="text-uppercase">g</span>et in touch</h2>
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name *" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="text" name="number" class="form-control" id="number" placeholder="Your Number *" min="10" max="10" required>
+                </div>
+              </div>
+              <div class="row mt-3">
+                  <div class="col-md-6 form-group">
+                    <input type="date" name="date" class="form-control date" id="date" required>
+                  </div>
+                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <input type="time" name="time" class="form-control" id="time" required>
+                  </div>
+                </div>
+                <div class="row mt-3">
+                  <div class="col-md-6 form-group">
+                      <input type="text" name="location" class="form-control" id="location" placeholder="Desired Location *" required>
+                  </div>
+                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                      <input type="text" name="occasion" class="form-control" id="occasion" placeholder="Your Occasion *" required>
+                  </div>
+                </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control w-50 m-auto" name="message" rows="2" placeholder="Message *"></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading p-2 text-center rounded">Loading</div>
+                <div class="error-message p-2 text-center fs-5 rounded">invalid input</div>
+                <div class="sent-message p-2 text-center fs-5 rounded">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit" class="text-white border-0 bg-prim rounded-pill">Send Message</button></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end php-form -->
+     <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials mt-5 pt-3">
+  <div class="container">
+    <div class="testimonials-header mb-5">
+      <h2 class="text-capitalize mb-1">testimonials</h2>
+      <p class="text-white fw-bold"><span class="text-uppercase">w</span>hat they are saying</p>
+    </div>
+    <div class="slides-3 swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="testimonial-item text-center flex-column px-4 py-5 m-4">
+            <div class="stars mb-3">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="fst-italic mb-2">
+              "<span class="text-uppercase">n</span>aema exceeded my expectations with her creativity, attention to detail, and ability to capture the essence of the moment. <span class="text-uppercase">i</span> highly recommend her for anyone seeking a skilled and passionate photographer."
+            </p>
+            <div class="profile gallery gallery-item">
+              <img src="assets/img/testimonials/naema.jpg" class="testimonial-img rounded-circle" alt="">
+              <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="naema.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+              <h3 class="text-capitalize fw-bold mt-2">naema saif</h3>
+              <h4 class="text-capitalize">photography</h4>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="testimonial-item text-center flex-column px-4 py-5 m-4">
+            <div class="stars mb-3">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="fst-italic mb-2">
+              "<span class="text-uppercase">w</span>orking with <span class="text-uppercase">a</span>laa was a delightful experience. <span class="text-uppercase">s</span>he created a comfortable atmosphere during the shoot, bringing out the best in me. <span class="text-uppercase">t</span>he final photos were stunning, and <span class="text-uppercase">i</span>'m grateful for <span class="text-uppercase">a</span>laa's  talent and professionalism."
+            </p>
+            <div class="profile gallery gallery-item  mt-auto">
+              <img src="assets/img/testimonials/alaa abufares.jpg" class="testimonial-img rounded-circle" alt="">
+              <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="alaa.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+              <h3 class="text-capitalize fw-bold mt-2">alaa abufares</h3>
+              <h4 class="text-capitalize">photography</h4>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="testimonial-item text-center flex-column px-4 py-5 m-4">
+            <div class="stars mb-3">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="fst-italic mb-2">
+              "<span class="text-uppercase">s</span>amar provided seamless and top-notch photography services. <span class="text-uppercase">f</span>rom the initial consultation to the final delivery, the experience was excellent. <span class="text-uppercase">h</span>er unique artistic flair sets her work apart, and <span class="text-uppercase">i</span> am beyond satisfied with the quality of the images."
+            </p>
+            <div class="profile gallery gallery-item  mt-auto">
+              <img src="assets/img/testimonials/samar.jpg" class="testimonial-img rounded-circle" alt="">
+              <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="samar.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+              <h3 class="text-capitalize fw-bold mt-2">samar barjous</h3>
+              <h4 class="text-capitalize">photography</h4>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="testimonial-item text-center flex-column px-4 py-5 m-4">
+            <div class="stars mb-3">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="fst-italic mb-2">
+              "<span class="text-uppercase">i</span> am blown away by the results of hiring <span class="text-uppercase">r</span>ahaf for a special event. <span class="text-uppercase">t</span>he photos beautifully documented the occasion, telling a story with each shot. <span class="text-uppercase">h</span>er incredible eye for composition and knack for capturing emotions make them the ideal choice for anyone seeking a talented and professional photographer."
+            </p>
+            <div class="profile gallery gallery-item  mt-auto">
+              <img src="assets/img/testimonials/rahaf.jpg" class="testimonial-img rounded-circle" alt="">
+              <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="rahaf.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+              <h3 class="text-capitalize fw-bold mt-2">rahaf eid</h3>
+              <h4 class="text-capitalize">photography</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination position-relative"></div>
+    </div>
+  </div>
+    </section>
+<!-- ====== End Testimonials ====== -->
+  </main>
+  <!-- ======== End Contact ====== -->
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer mt-5 py-5">
+  <div class="container">
+    <div class="copyright text-capitalize text-center">
+      <p>&copy; copyright <strong>photogallery</strong>. all rights reserved</p>
+    </div>
+    <div class="credits text-capitalize text-center">
+      <p>designed by <a href="https://www.linkedin.com/in/leen-saleh/" target="_blank">leen <span class="text-capitalize p-2 rounded fw-semibold position-absolute">linkedin</span></a> 
+        <span class="">&</span> <a href="https://www.linkedin.com/in/reem-abukarsh/" target="_blank">reem <span class="text-capitalize p-2 rounded fw-semibold position-absolute">linkedin</span></a></p>
+    </div>
+  </div>
+</footer>
+<!-- ======== End Footer ======= -->
+<div id="progress" class="position-fixed rounded-circle text-center">
+  <a id="progress-value"><i class="bi bi-arrow-up-short fs-3 text-prim"></i></a>
+</div>
+<div id="preloader">
+  <div class="line"></div>
+</div>
+  <!--Vendor JS-->
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="vendor/aos/aos.js"></script>
+  <!--Custom JS-->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
